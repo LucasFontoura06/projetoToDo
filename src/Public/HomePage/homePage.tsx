@@ -1,6 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Footer from '../../componentes/Footer/footer';
+import Header from '../../componentes/Header/header';
+import FuncionalidadesHomePage from '../../componentes/FuncionalidadesHomePage/funcionalidades';
 import styles from './homePage.module.css';
+import { CONSTANTES } from '../../componentes/Constants/contants';
 
 function HomePage() {
   // Hook do react-router-dom para navegação
@@ -25,61 +29,18 @@ function HomePage() {
 
   return (
     <div className={styles.homeContainer}>
-      {/* Header minimalista */}
-      <header className={styles.header}>
-        <div className={styles.logo}>
-          <span className={styles.logoIcon}>📝</span>
-          <span className={styles.logoText}>To-Do List</span>
-        </div>
-      </header>
+      {/* Header reutilizável */}
+      <Header />
 
       {/* Conteúdo principal */}
       <main className={styles.main}>
         <div className={styles.hero}>
-          <h1 className={styles.title}>
-            Organize suas tarefas de forma simples
-          </h1>
-          <p className={styles.subtitle}>
-            Um aplicativo minimalista para gerenciar suas atividades diárias
-          </p>
+          <h1 className={styles.title}> {CONSTANTES.TITULO_HOMEPAGE} </h1>
+          <p className={styles.subtitle}> {CONSTANTES.SUBTITULO_HOMEPAGE} </p>
         </div>
 
-        {/* Seção de funcionalidades */}
-        <section className={styles.features}>
-          <h2 className={styles.sectionTitle}>O que você pode fazer</h2>
-          <div className={styles.featuresGrid}>
-            <div className={styles.feature}>
-              <span className={styles.featureIcon}>➕</span>
-              <h3>Adicionar tarefas</h3>
-              <p>Crie novas tarefas rapidamente</p>
-            </div>
-            <div className={styles.feature}>
-              <span className={styles.featureIcon}>✅</span>
-              <h3>Marcar como concluída</h3>
-              <p>Risque tarefas da sua lista</p>
-            </div>
-            <div className={styles.feature}>
-              <span className={styles.featureIcon}>✏️</span>
-              <h3>Editar tarefas</h3>
-              <p>Modifique quando necessário</p>
-            </div>
-            <div className={styles.feature}>
-              <span className={styles.featureIcon}>🗑️</span>
-              <h3>Excluir tarefas</h3>
-              <p>Remova o que não precisa</p>
-            </div>
-            <div className={styles.feature}>
-              <span className={styles.featureIcon}>🔍</span>
-              <h3>Filtrar por status</h3>
-              <p>Encontre o que procura</p>
-            </div>
-            <div className={styles.feature}>
-              <span className={styles.featureIcon}>📱</span>
-              <h3>Responsivo</h3>
-              <p>Funciona em qualquer dispositivo</p>
-            </div>
-          </div>
-        </section>
+        {/* Componente de funcionalidades */}
+        <FuncionalidadesHomePage />
 
         {/* Seção de ação */}
         <section className={styles.cta}>
@@ -103,10 +64,8 @@ function HomePage() {
         </section>
       </main>
 
-      {/* Footer minimalista */}
-      <footer className={styles.footer}>
-        <p>Projeto de aprendizado • React + TypeScript</p>
-      </footer>
+      {/* Footer reutilizável */}
+      <Footer />
     </div>
   );
 }

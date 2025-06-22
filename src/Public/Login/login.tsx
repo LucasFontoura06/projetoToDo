@@ -1,7 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Footer from '../../componentes/Footer/footer';
+import Header from '../../componentes/Header/header';
 import styles from './login.module.css';
+import { CONSTANTES } from '../../componentes/Constants/contants';
 
 function Login() {
   // Hook do react-router-dom para navegação
@@ -32,34 +35,26 @@ function Login() {
 
   return (
     <div className={styles.loginContainer}>
-      {/* Header minimalista */}
-      <header className={styles.header}>
-        <div className={styles.logo}>
-          <span className={styles.logoIcon}>📝</span>
-          <span className={styles.logoText}>To-Do List</span>
-        </div>
-        <button 
-          className={styles.backButton} 
-          onClick={handleBack}
-        >
-          ← Voltar
-        </button>
-      </header>
+      {/* Header reutilizável com botão de voltar */}
+      <Header 
+        showBackButton={true}
+        onBackClick={handleBack}
+      />
 
       {/* Conteúdo principal */}
       <main className={styles.main}>
         <div className={styles.loginSection}>
           <div className={styles.loginContent}>
-            <h1 className={styles.title}>Entrar no sistema</h1>
-            <p className={styles.subtitle}> Acesse sua conta para gerenciar suas tarefas </p>
+            <h1 className={styles.title}>{CONSTANTES.TITULO_LOGIN}</h1>
+            <p className={styles.subtitle}>{CONSTANTES.SUBTITULO_LOGIN}</p>
             
             <form className={styles.loginForm} onSubmit={handleSubmit}>
               <div className={styles.formGroup}>
-                <label className={styles.label}>Email</label>
+                <label className={styles.label}>{CONSTANTES.LABEL_EMAIL}</label>
                 <input
                   type="email"
                   className={styles.input}
-                  placeholder="Digite seu email"
+                  placeholder={CONSTANTES.PLACEHOLDER_EMAIL}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -67,32 +62,25 @@ function Login() {
               </div>
               
               <div className={styles.formGroup}>
-                <label className={styles.label}>Senha</label>
+                <label className={styles.label}>{CONSTANTES.LABEL_SENHA}</label>
                 <input
                   type="password"
                   className={styles.input}
-                  placeholder="Digite sua senha"
+                  placeholder={CONSTANTES.PLACEHOLDER_SENHA}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
                 />
               </div>
               
-              <button type="submit" className={styles.submitButton}> Entrar </button>
+              <button type="submit" className={styles.submitButton}> {CONSTANTES.BOTAO_ENTRAR} </button>
             </form>
-
-            <div className={styles.helpText}>
-              <p>Este é um projeto de aprendizado</p>
-              <p>Use qualquer email e senha para testar</p>
-            </div>
           </div>
         </div>
       </main>
 
-      {/* Footer minimalista */}
-      <footer className={styles.footer}>
-        <p>Projeto de aprendizado • React + TypeScript</p>
-      </footer>
+      {/* Footer reutilizável */}
+      <Footer />
     </div>
   );
 }
