@@ -1,11 +1,11 @@
 import React from 'react';
-import Login from './Public/Login/login';
+import AppRoutes from './routes';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Login />
+      <AppRoutes />
     </div>
   );
 }
