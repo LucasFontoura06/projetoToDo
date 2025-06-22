@@ -1,5 +1,5 @@
-import React from 'react';
 import styles from './header.module.css';
+import React from 'react';
 
 // Interface para as props do Header
 interface HeaderProps {

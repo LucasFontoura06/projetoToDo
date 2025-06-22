@@ -1,5 +1,5 @@
-import React from 'react';
 import styles from './funcionalidades.module.css';
+import React from 'react';
 
 // Interface para as funcionalidades
 interface Funcionalidade {

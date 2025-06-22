@@ -1,10 +1,10 @@
-import React from 'react';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { CONSTANTES } from '../../componentes/Constants/contants';
 import Footer from '../../componentes/Footer/footer';
 import Header from '../../componentes/Header/header';
+import { useNavigate } from 'react-router-dom';
 import styles from './login.module.css';
-import { CONSTANTES } from '../../componentes/Constants/contants';
+import { useState } from 'react';
+import React from 'react';
 
 function Login() {
   // Hook do react-router-dom para navegação
@@ -21,10 +21,6 @@ function Login() {
     console.log('=== DADOS DO LOGIN ===');
     console.log('Email digitado:', email);
     console.log('Senha digitada:', password);
-    
-    // Aqui você pode adicionar a lógica de autenticação
-    // Por enquanto, vamos apenas mostrar um alerta
-    alert('Login realizado com sucesso!\n\nEmail: ' + email + '\nSenha: ' + password);
   };
 
   // Função para voltar para a página inicial

@@ -1,10 +1,10 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import FuncionalidadesHomePage from '../../componentes/FuncionalidadesHomePage/funcionalidades';
+import { CONSTANTES } from '../../componentes/Constants/contants';
 import Footer from '../../componentes/Footer/footer';
 import Header from '../../componentes/Header/header';
-import FuncionalidadesHomePage from '../../componentes/FuncionalidadesHomePage/funcionalidades';
+import { useNavigate } from 'react-router-dom';
 import styles from './homePage.module.css';
-import { CONSTANTES } from '../../componentes/Constants/contants';
+import React from 'react';
 
 function HomePage() {
   // Hook do react-router-dom para navegação
@@ -22,9 +22,6 @@ function HomePage() {
   const handleAbout = () => {
     console.log('=== USUÁRIO CLICOU EM SOBRE ===');
     console.log('Mostrando informações sobre o aplicativo...');
-    // Aqui você pode adicionar a navegação para uma página sobre
-    // Por enquanto, vamos apenas mostrar um alerta
-    alert('Este é um projeto de aprendizado em React e TypeScript!\n\nFuncionalidades:\n• Adicionar tarefas\n• Marcar como concluídas\n• Editar tarefas\n• Excluir tarefas\n• Filtrar por status');
   };
 
   return (
