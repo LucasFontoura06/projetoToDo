@@ -21,6 +21,13 @@ export const CONSTANTES = {
     TITULO_HOMEPAGE: "Organize suas tarefas de forma simples",
     SUBTITULO_HOMEPAGE: "Um aplicativo minimalista para gerenciar suas atividades diárias",
 
-
+    // ---------- PAGINA CADASTRO ----------
+    TITULO_CADASTRO: "Criar conta",
+    SUBTITULO_CADASTRO: "Crie sua conta para gerenciar suas tarefas",
+    LABEL_NOME: "Nome",
+    LABEL_EMAIL_CADASTRO: "Email",
+    LABEL_SENHA_CADASTRO: "Senha",
+    BOTAO_CADASTRAR: "Criar conta",
+    PLACEHOLDER_NOME: "Digite seu nome",
 
 }

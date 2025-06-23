@@ -1,5 +1,6 @@
 import styles from './header.module.css';
 import React from 'react';
+import logo from '../../assets/telaCadastro/logoProject.jpg'; // Importe o seu logo aqui
 
 // Interface para as props do Header
 interface HeaderProps {
@@ -15,9 +16,8 @@ function Header({
 }: HeaderProps) {
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
-        <span className={styles.logoIcon}>📝</span>
-        <span className={styles.logoText}>To-Do List</span>
+      <div className={styles.logoContainer}>
+        <img src={logo} alt="Logo do Projeto" className={styles.logo} />
       </div>
       
       {showBackButton && onBackClick && (

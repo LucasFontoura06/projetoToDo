@@ -1,0 +1,94 @@
+/* Container que ocupa a tela toda e organiza Header, Main e Footer */
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2ff5c7 0%, #6861ed 50%, #cc47b8 100%);
+    background-attachment: fixed; /* Chave para o fundo contínuo */
+}
+
+/* Área de conteúdo principal com o gradiente e centralização */
+.mainContent {
+    flex-grow: 1; /* Faz o main ocupar o espaço restante */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    /* O background foi movido para o .pageContainer */
+}
+
+/* Card de cadastro com efeito de vidro (Glassmorphism) */
+.cadastroSection {
+    width: 100%;
+    max-width: 450px; /* Aumentei um pouco para mais espaço */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+/* --- ESTILOS PARA TÍTULOS, INPUTS E BOTÕES --- */
+
+.title {
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-family: 'Roboto Mono', monospace;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cadastroSection input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.cadastroSection input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'Roboto Mono', monospace;
+}
+
+.cadastroSection input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.cadastroSection button {
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.cadastroSection button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
